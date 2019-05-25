@@ -149,7 +149,7 @@ analogWrite(PWM_MOTOR_2, motor2_speed);
 digitalWrite(MOTOR_A1_PIN, HIGH); 
 digitalWrite(MOTOR_B1_PIN, LOW);
 digitalWrite(MOTOR_A2_PIN, HIGH); 
-digitalWrite(MOTOR_B2_PIN, LOW);
+digitalWrite(MOTOR_B2_PIN, HIGH);
 Serial.println("Front Right");
 }
 
@@ -160,7 +160,7 @@ motor2_speed=255;
 analogWrite(PWM_MOTOR_1, motor1_speed);
 analogWrite(PWM_MOTOR_2, motor2_speed);
 digitalWrite(MOTOR_A1_PIN, HIGH); 
-digitalWrite(MOTOR_B1_PIN, LOW);
+digitalWrite(MOTOR_B1_PIN, HIGH);
 digitalWrite(MOTOR_A2_PIN, HIGH); 
 digitalWrite(MOTOR_B2_PIN, LOW);
 Serial.println("Front Left");
@@ -175,7 +175,7 @@ analogWrite(PWM_MOTOR_2, motor2_speed);
 digitalWrite(MOTOR_A1_PIN, HIGH); 
 digitalWrite(MOTOR_B1_PIN, LOW);
 digitalWrite(MOTOR_A2_PIN, HIGH); 
-digitalWrite(MOTOR_B2_PIN, LOW);
+digitalWrite(MOTOR_B2_PIN, HIGH);
 Serial.println("Front Right");
 }
 
@@ -186,12 +186,38 @@ motor2_speed=150;
 analogWrite(PWM_MOTOR_1, motor1_speed);
 analogWrite(PWM_MOTOR_2, motor2_speed);
 digitalWrite(MOTOR_A1_PIN, HIGH); 
-digitalWrite(MOTOR_B1_PIN, LOW);
+digitalWrite(MOTOR_B1_PIN, HIGH);
 digitalWrite(MOTOR_A2_PIN, HIGH); 
 digitalWrite(MOTOR_B2_PIN, LOW);
 Serial.println("Front Left");
 }
 
+void left()
+{
+motor1_speed=100;
+motor2_speed=100;
+analogWrite(PWM_MOTOR_1, motor1_speed);
+analogWrite(PWM_MOTOR_2, motor2_speed);
+digitalWrite(MOTOR_A1_PIN, HIGH); 
+digitalWrite(MOTOR_B1_PIN, LOW);
+digitalWrite(MOTOR_A2_PIN, LOW); 
+digitalWrite(MOTOR_B2_PIN, HIGH);
+Serial.println("Moving Left");
+}
+
+
+void right()
+{
+motor1_speed=100;
+motor2_speed=100;
+analogWrite(PWM_MOTOR_1, motor1_speed);
+analogWrite(PWM_MOTOR_2, motor2_speed);
+digitalWrite(MOTOR_A1_PIN, LOW); 
+digitalWrite(MOTOR_B1_PIN, HIGH);
+digitalWrite(MOTOR_A2_PIN, HIGH); 
+digitalWrite(MOTOR_B2_PIN, LOW);
+Serial.println("Moving Right");
+}
 
 
 void low_speed()
